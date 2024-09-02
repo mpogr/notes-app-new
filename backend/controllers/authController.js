@@ -23,7 +23,8 @@ export const register = async (req, res) => {
     try {
         const { username, email, hashedPassword } = req.body;
 
-        const existingUser = await pool.query('SELECT * FROM users WHERE username = $1 OR email = $2', [username, email]);
+        //const existingUser = await pool.query('SELECT * FROM users WHERE username = $1 OR email = $2', [username, email]);
+        const existingUser = await pool.query("SELECT * FROM users WHERE username = '" + username + "' OR email = '" + email + "';");
         if (existingUser.rows.length > 0) {
             const message = existingUser.rows[0].username === username ? 'Username exists' : 'Email exists';
             return res.status(400).json({ message });
