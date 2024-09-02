@@ -1,0 +1,24 @@
+postgres:
+  dbName: "notesdb"
+  user: "postgres"
+  storageSize: "10Gi"
+  password: "TGV0bWVpbiAxMjM0NTYh"  # Base64 encoded password
+
+image:
+  repository: notesapp
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+replicaCount: 1

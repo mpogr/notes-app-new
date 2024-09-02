@@ -1,0 +1,18 @@
+replicaCount: 1
+
+image:
+  repository: mpogr/notes-app-frontend
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: LoadBalancer
+  port: 8088
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi

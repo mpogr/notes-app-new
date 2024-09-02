@@ -1,0 +1,21 @@
+apiVersion: v2
+name: notesapp
+description: A Helm chart for Notes Application including frontend, backend, and PostgreSQL
+version: 0.1.0
+appVersion: "1.0"
+
+dependencies:
+  - name: frontend
+    version: 0.1.0
+    repository: ""
+    alias: frontend
+
+  - name: backend
+    version: 0.1.0
+    repository: ""
+    alias: backend
+
+  - name: postgresql
+    version: 0.1.0
+    repository: ""
+    alias: postgresql

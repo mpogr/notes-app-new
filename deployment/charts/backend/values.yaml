@@ -1,0 +1,24 @@
+replicaCount: 1
+
+image:
+  repository: mpogr/notes-app-backend
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 3000
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+postgres:
+  dbName: "notesdb"
+  user: "postgres"
+  hostName: "notes-app-postgres"
+  password: "TGV0bWVpbiAxMjM0NTYh"  # Base64 encoded password
