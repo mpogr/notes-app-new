@@ -1,4 +1,4 @@
-name: Scan Open Source with Snyk and Monitor
+name: Scan with Snyk Code
 on: push
 jobs:
   security:
