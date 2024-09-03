@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Frontend for NotesApp",
   "main": "index.js",
-  "homepage": "http://10.5.130.1:8088/",
+  "homepage": ".",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

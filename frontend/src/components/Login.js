@@ -58,50 +58,48 @@ function Login() {
         <div>
             <h1>Login to Your Notes</h1>
             <Grid container alignItems="center" justifyContent="center">
-                <Grid container alignItems="center" justifyContent="center" direction="column">
-                    <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-                        <InputLabel htmlFor="outlined-adornment-username">Username</InputLabel>
-                        <OutlinedInput
-                            id="outlined-adornment-username"
-                            type="text"
-                            label="Username"
-                            value={username}
-                            onChange={e => setUsername(e.target.value)}
-                        />
-                    </FormControl>
-                    <Button sx={{ m: 1, width: '15ch' }} variant="contained"
-                        onClick={handleLogin}
-                        disabled={!username || !password}
-                    >
-                        Login
-                    </Button>
-                </Grid>
-                <Grid container alignItems="center" justifyContent="center" direction="column">
-                    <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-                        <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-                        <OutlinedInput
-                            id="outlined-adornment-password"
-                            type={showPassword ? 'text' : 'password'}
-                            endAdornment={
-                                <InputAdornment position="end">
-                                    <IconButton
-                                        aria-label="toggle password visibility"
-                                        onClick={handleClickShowPassword}
-                                        onMouseDown={handleMouseDownPassword}
-                                        onMouseUp={handleMouseUpPassword}
-                                        edge="end"
-                                    >
-                                        {showPassword ? <VisibilityOff /> : <Visibility />}
-                                    </IconButton>
-                                </InputAdornment>
-                            }
-                            label="Password"
-                            value={password}
-                            onChange={e => setPassword(e.target.value)}
-                        />
-                    </FormControl>
-                    <Button sx={{ m: 1, width: '15ch' }} variant="outlined" color="primary" onClick={handleRegister}>Register</Button>
-                </Grid>
+                <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-username">Username</InputLabel>
+                    <OutlinedInput
+                        id="outlined-adornment-username"
+                        type="text"
+                        label="Username"
+                        value={username}
+                        onChange={e => setUsername(e.target.value)}
+                    />
+                </FormControl>
+                <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+                    <OutlinedInput
+                        id="outlined-adornment-password"
+                        type={showPassword ? 'text' : 'password'}
+                        endAdornment={
+                            <InputAdornment position="end">
+                                <IconButton
+                                    aria-label="toggle password visibility"
+                                    onClick={handleClickShowPassword}
+                                    onMouseDown={handleMouseDownPassword}
+                                    onMouseUp={handleMouseUpPassword}
+                                    edge="end"
+                                >
+                                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                                </IconButton>
+                            </InputAdornment>
+                        }
+                        label="Password"
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
+                    />
+                </FormControl>
+            </Grid>
+            <Grid container alignItems="center" spacing={12} justifyContent="center">
+                <Button sx={{ m: 1, width: '15ch' }} variant="contained"
+                    onClick={handleLogin}
+                    disabled={!username || !password}
+                >
+                    Login
+                </Button>
+                <Button sx={{ m: 1, width: '15ch' }} variant="outlined" color="primary" onClick={handleRegister}>Register</Button>
             </Grid>
             {error && <div style={{ color: 'red' }}>{error}</div>}
         </div>
