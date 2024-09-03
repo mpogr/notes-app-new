@@ -1,6 +1,9 @@
 name: Scan with Snyk Code
 on: push
 jobs:
+ permissions:
+    contents: read
+    security-events: write
   security:
     runs-on: ubuntu-latest
     steps:
