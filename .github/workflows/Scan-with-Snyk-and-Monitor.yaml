@@ -10,4 +10,5 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
+          args: --all-projects --severity-threshold=critical
           command: monitor
