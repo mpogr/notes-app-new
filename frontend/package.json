@@ -13,7 +13,7 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
+    "react-router-dom": "^6.0.0",
     "zxcvbn": "^4.4.2",
     "@material-ui/core": "^4.12.4",
     "bcryptjs": "^2.4.3",
